@@ -1,0 +1,17 @@
+@keyframes sp { to { transform: rotate(360deg) } }
+@keyframes fu { from { opacity: 0; transform: translateY(30px) } to { opacity: 1; transform: translateY(0) } }
+@keyframes si { from { opacity: 0; transform: scale(.9) } to { opacity: 1; transform: scale(1) } }
+@keyframes cd { 0% { stroke-dashoffset: 50 } 100% { stroke-dashoffset: 0 } }
+@keyframes cp { 0% { transform: scale(0) } 50% { transform: scale(1.15) } 100% { transform: scale(1) } }
+@keyframes cf { 0% { opacity: 1; transform: translateY(0) rotate(0) } 100% { opacity: 0; transform: translateY(-80px) rotate(720deg) } }
+
+.spin { width: 48px; height: 48px; border: 4px solid #e2e8f0; border-top-color: #0EA5E9; border-radius: 50%; animation: sp .8s linear infinite; }
+.dark .spin { border-color: #334155; border-top-color: #0EA5E9; }
+.afu { animation: fu .6s ease-out forwards; }
+.asi { animation: si .4s ease-out forwards; }
+.d1 { animation-delay: .1s; } .d2 { animation-delay: .2s; } .d3 { animation-delay: .3s; }
+.rv { opacity: 0; transform: translateY(30px); transition: all .7s ease; }
+.rv.vis { opacity: 1; transform: translateY(0); }
+.cfp { position: absolute; width: 8px; height: 8px; animation: cf 1s ease-out forwards; }
+.scc { animation: cp .5s ease-out forwards; }
+.scp { stroke-dasharray: 50; stroke-dashoffset: 50; animation: cd .4s ease-out .4s forwards; }

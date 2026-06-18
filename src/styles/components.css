@@ -1,0 +1,32 @@
+#loader { position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; background: #fff; transition: opacity .5s, visibility .5s; }
+.dark #loader { background: #0F172A; }
+#loader.hide { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.hslide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.5s; background-size: cover; background-position: center; }
+.hslide.on { opacity: 1; }
+
+.gl { background: rgba(255, 255, 255, .8); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, .3); }
+.dark .gl { background: rgba(15, 23, 42, .85); border-bottom-color: rgba(51, 65, 85, .5); }
+
+.ov { position: fixed; inset: 0; background: rgba(0, 0, 0, .5); z-index: 100; opacity: 0; visibility: hidden; transition: all .3s; }
+.ov.op { opacity: 1; visibility: visible; }
+
+.pn { position: fixed; top: 0; right: 0; bottom: 0; width: 100%; max-width: 420px; z-index: 101; transform: translateX(100%); transition: transform .35s ease; }
+.pn.op { transform: translateX(0); }
+
+.mo { position: fixed; inset: 0; background: rgba(0, 0, 0, .6); z-index: 110; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all .3s; }
+.mo.op { opacity: 1; visibility: visible; }
+
+.lb { position: fixed; inset: 0; z-index: 120; background: rgba(0, 0, 0, .95); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all .3s; cursor: pointer; }
+.lb.op { opacity: 1; visibility: visible; }
+
+.tt { position: fixed; bottom: 24px; right: 24px; z-index: 200; padding: 12px 24px; border-radius: 12px; color: #fff; font-weight: 500; transform: translateY(100px); opacity: 0; transition: all .4s; }
+.tt.sh { transform: translateY(0); opacity: 1; }
+.tt-s { background: #16A34A; } .tt-i { background: #0EA5E9; } .tt-w { background: #F97316; }
+
+.tl-i { position: relative; padding-left: 40px; padding-bottom: 32px; border-left: 2px solid #e2e8f0; }
+.dark .tl-i { border-left-color: #334155; }
+.tl-i::before { content: ''; position: absolute; left: -8px; top: 0; width: 14px; height: 14px; border-radius: 50%; background: #0EA5E9; border: 3px solid #fff; }
+.dark .tl-i::before { border-color: #1E293B; }
+
+.gt { background: linear-gradient(135deg, #0EA5E9, #F97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }

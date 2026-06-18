@@ -1,0 +1,1 @@
+export function fR(n) { return "Rp " + n.toLocaleString("id-ID"); }
